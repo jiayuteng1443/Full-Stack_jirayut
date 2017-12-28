@@ -1,0 +1,23 @@
+  
+
+
+<input type="text" ng-model="search" class="form-control " placeholder="Search">
+<br>
+<table class="table table-striped">
+  <thead>
+  <tr>
+    <th>id</th>
+    <th>Project</th>
+    <th>Description</th>
+   
+  </tr>
+  </thead>
+  <tbody>
+  <tr ng-repeat="project in projects | filter:search | orderBy:'name'">
+    <td>{{project.id}}</a></td>   
+    <td>{{project.first_name}}</td>
+    <td>{{project.email}}</td>
+    
+  </tr>
+  </tbody>
+</table>
